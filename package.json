@@ -1,0 +1,31 @@
+{
+  "name": "post-manager",
+  "version": "1.0.0",
+  "description": "This npm package provides functionality for managing posts, including creating posts, fetching posts, and adding comments and adding reaction on post. It is built with Node.js, Express, and MongoDB.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js",
+    "lint": "eslint .  --ext .js",
+    "prepare": "husky install"
+  },
+  "author": "Kumar Shivam",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.0.3",
+    "nodemon": "^3.0.2",
+    "short-unique-id": "^5.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"npm run lint"
+    }
+  }
+}
